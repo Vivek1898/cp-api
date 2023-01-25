@@ -1,3 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+.change{
+  color:aliceblue !important;
+}
+.react-calendar-heatmap{
+  width: 92% !important;
+  margin: auto !important;
+}
+.min-w-80 {
+  min-width: 20rem;
+}
+.resize::-webkit-resizer,
+.resize-x::-webkit-resizer,
+.resize-y::-webkit-resizer {
+  background-color: transparent;
+}
+.resize:after,
+.resize-x:after,
+.resize-y:after {
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  content: '\F045D';
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: 24px;
+  text-rendering: auto;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgba(0,0,0,0.3);
+}
 /* #root {
   max-width: 1280px;
   margin: 0 auto;

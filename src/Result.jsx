@@ -8,7 +8,8 @@ import HeatMap from "@uiw/react-heat-map";
 import CalendarHeatmap from "react-calendar-heatmap";
 import { useLayoutEffect } from "react";
 import { Routes, Route, useParams, BrowserRouter } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import LoadingCard from "./Loading";
 // import 'react-calendar-heatmap/dist/styles.css';
 function App() {
   //console.log(match.params);
@@ -31,11 +32,15 @@ function App() {
   const [GithubApi, setGithubApi] = useState([]);
   const [loadGithub, setLoadGithub] = useState(true);
   const [leetLoading, setLeetLoading] = useState(true);
-
+const CalStyle={
+      margin: "auto",
+    width: "92%",
+    }
   async function getDataFromSearch() {
     const user = {
       profile: profile,
     };
+    
     // setCodeForces(newProfile);
     console.log(profile);
     //   return;
@@ -68,13 +73,13 @@ function App() {
           .replace("-", "/")
           .split("T")[0]
           .replace("-", "/");
-        tempData.push({ date: `${myDate}`, count: `5` });
+        tempData.push({ date: `${myDate}`, count: `2` });
       });
 
       setApiDataCf(tempData);
       tempData.splice();
       setLoading(false);
-
+        toast.success("Codeforces Data Loaded Successfully" )
       console.log(ApiDataCf[1]);
       console.log(ApiDataCf);
     }
@@ -211,28 +216,37 @@ function App() {
   
   return (
     <>
+    <div class=" bg-gray-900 min-h-screen  text-lg">
+
+      
+      <div class="text-six">
+      <h1 class="font-medium leading-tight  text-4xl mt-0 mb-2 text-aliceblue-900 change text-center ">Codeforces Heatmap</h1>
+{/* <CalendarHeatmap
+  startDate={startDate}
+  endDate={endDate}
+  values={ApiDataCf}
+/> */}
+{ApiDataCf.length>0 ?  <CalendarHeatmap onMouseOver={(event, value) => console.log(event, value)} class="calS" startDate={startDate} endDate={endDate} values={ApiDataCf} /> : <h1 class="font-medium leading-tight  text-4xl mt-0 mb-2 text-aliceblue-900 change text-center "> <LoadingCard class="text-six"  count={2}/></h1>}
+      </div>
+
+
+
+<h1  class="font-medium leading-tight  text-4xl mt-0 mb-2 text-aliceblue-900 change text-center ">Github HeatMap</h1>
+
+
+{GithubApi.length>0 ?  <CalendarHeatmap class="calS" startDate={startDate} endDate={endDate} values={GithubApi} /> : <h1 class="font-medium leading-tight  text-4xl mt-0 mb-2 text-aliceblue-900 change text-center "><LoadingCard class="text-six"  count={2}/></h1>}
+{/* <CalendarHeatmap
+  startDate={startDate}
+  endDate={endDate}
+  values={GithubApi}
+/> */}
+
+<h1 class="font-medium leading-tight  text-4xl mt-0 mb-2 text-aliceblue-900 change text-center ">Leetcode HeatMap</h1>
+{newS.length>3 ?  <CalendarHeatmap class="calS" startDate={startDate} endDate={endDate} values={newS} /> : <h1 class="font-medium leading-tight  text-4xl mt-0 mb-2 text-aliceblue-900 change text-center "><LoadingCard class="text-six"  count={2}/></h1>}
+
+    </div>
    
-      <h1>CodeForces HeatMap</h1>
-
-      <CalendarHeatmap
-        startDate={startDate}
-        endDate={endDate}
-        values={ApiDataCf}
-      />
-
-      <hr></hr>
-      <h1>Github HeatMap</h1>
- 
-
-      <CalendarHeatmap
-        startDate={startDate}
-        endDate={endDate}
-        values={GithubApi}
-      />
-
-      <h1>Leetcode HeatMap</h1>
-
-      <CalendarHeatmap startDate={startDate} endDate={endDate} values={newS} />
+    
     </>
   );
 }
