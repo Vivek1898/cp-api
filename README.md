@@ -1,7 +1,6 @@
 # `TLE PROFILES`
 
 ### **Platform Supported**
----
 `Leetcode`
 `Github`
 `CodeForces`
@@ -24,6 +23,7 @@
  ```sh
 # ReactJs
 # NodeJs
+# MongoDB
 # Talwind Css
  ```
 
