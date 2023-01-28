@@ -70,7 +70,7 @@ const Form = () => {
           <div class=" min-h-screen flex items-center text-lg">
             <form
               onSubmit={handleSubmit}
-              class="p-10 md:w-2/3 lg:w-1/2 mx-auto rounded"
+              class="p-10  lg:w-1/2 mx-auto rounded"
             >
               <div class="shadow">
                 <div class="flex items-center  rounded-t-lg border-gray-500 border-b">
