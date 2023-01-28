@@ -229,6 +229,19 @@ function App() {
     setStartDate(new Date(`${e.target.value}/01/01`));
     setEndDate(new Date(`${e.target.value}/12/30`));
   };
+  const startServer = async()=>{
+    try {
+      const data = await axios.post(`${import.meta.env.VITE_API}`);
+     // console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+ useEffect(()=>{
+
+startServer();
+  }
+  ,[])
 
   // const[handleMonth, setHandleMonth] = useState("");
   // const[handleDay, setHandleDay] = useState("");

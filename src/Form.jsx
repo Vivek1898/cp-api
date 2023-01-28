@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 const Form = () => {
@@ -55,6 +55,22 @@ if(!Name){
     }
     //  alert('You have submitted');
   };
+
+  const startServer = async()=>{
+    try {
+      const data = await axios.post(`${import.meta.env.VITE_API}`);
+     // console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+ useEffect(()=>{
+
+startServer();
+  }
+  ,[])
+
+
   const getUser = async (e) => {
     e.preventDefault();
     const user = {
