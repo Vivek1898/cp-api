@@ -5,9 +5,7 @@ const Header = () => {
   const button = document.querySelector('#menu-button'); // Hamburger Icon
 const menu = document.querySelector('#navbar-default'); // Menu
 
-button.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-});
+
     return (
       
 <nav class="text-white border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
