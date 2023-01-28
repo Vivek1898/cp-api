@@ -1,13 +1,11 @@
-//import { useState } from 'react'
-import moment from "moment/moment";
-import reactLogo from "./assets/react.svg";
+
+
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import HeatMap from "@uiw/react-heat-map";
 import CalendarHeatmap from "react-calendar-heatmap";
-import { useLayoutEffect } from "react";
-// import 'react-calendar-heatmap/dist/styles.css';
+
+
 function App() {
   const [count, setCount] = useState(0);
   const [dataC, setDataC] = useState([]);
@@ -84,6 +82,7 @@ function App() {
     );
       setLoading(true);
     if (value) {
+      console.log(value.data)
       console.log(value.data.result);
       const tempData = ApiDataCf;
       const myArray = value.data.result;
@@ -134,7 +133,7 @@ function App() {
                 }
               }
             }
-          }
+          } 
         }`
   }
   const response = await fetch(`${import.meta.env.VITE_GIT}`, { method: 'POST', body: JSON.stringify(body), headers: headers })

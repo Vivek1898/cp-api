@@ -17,7 +17,8 @@
     "react-calendar-heatmap": "^1.9.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.7.0",
-    "react-toastify": "^9.1.1"
+    "react-toastify": "^9.1.1",
+    "saas": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

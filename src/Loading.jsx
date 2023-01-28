@@ -48,7 +48,7 @@ const LoadingCard = ({ count }) => {
     return totalCards;
   };
 
-  return <div className="flex items-center" >{cards()}</div>;
+  return <div style={{margin:"auto" , justifyContent:"center"}} className="flex items-center" >{cards()}</div>;
 };
 
 export default LoadingCard;

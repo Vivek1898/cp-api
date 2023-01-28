@@ -1,10 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+
 .change{
   color:aliceblue !important;
 }
+/* https://github.com/oguzbits/icon-parallax-background/blob/master/gif/Icon-Parallax.gif 
+https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif
+*/
+body {
+  background-image: url(Icon-Parallax.gif) !important;
+}
+.posYear{
+  display: -webkit-inline-box;
+    float: right;
+    padding: 2px 0 0  0;
+}
+.BgNav{
+  background: transparent !important;
+}
+
+.details{
+  text-align: end;
+}
+
+.react-calendar-heatmap .color-scale-0 { fill: #161b22; }
+.react-calendar-heatmap .color-scale-1 { fill: #0e4429; }
+.react-calendar-heatmap .color-scale-2 { fill: #006d32; }
+.react-calendar-heatmap .color-scale-3 { fill: #26a641; }
+.react-calendar-heatmap .color-scale-4 { fill: #39d353; }
 .react-calendar-heatmap{
   width: 92% !important;
   margin: auto !important;
