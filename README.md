@@ -1,6 +1,6 @@
 # `TLE PROFILES`
 
-### **Platforms**
+### **Platform Supported**
 ---
 `Leetcode`
 `Github`
