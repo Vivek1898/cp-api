@@ -309,7 +309,7 @@ function App() {
               <span class="mdi mdi-account-check blue-500"></span>{" "}
               <span class="inline-block py-1.5 px-2.5 leading-none text-center whitespace-nowrap align-baseline  text-yellow-600  rounded">
                 {" "}
-                {username}
+                {username.toUpperCase()}
               </span>
             </h2>
           </div>
@@ -317,7 +317,7 @@ function App() {
           {/* <mark class="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">User</mark> */}
           <h1 class=" text-3xl font-extrabold leading-none tracking-tight text-gray-900 change md:text-4xl text-white text-center ">
             Codeforces{" "}
-            <span class="text-yellow-600 dark:text-blue-500">Heatmap</span>{" "}
+            <span class="text-yellow-600 dark:text-yellow-600">Heatmap</span>{" "}
             <a
               target="blank"
               href={`https://codeforces.com/profile/${CodeForces}`}
@@ -381,7 +381,7 @@ function App() {
         {/* { isOk===true && <div class="text-aliceblue-900 change text-center">Month - { " "} {handleMonth} { "  " } Day= { handleDay} count= { " "} {handleSubCount}</div>} */}
         {/* <div></div> */}
         {/* { isOk===true &&    <div id="toast-default" class="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
-    <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
+    <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-yellow-600 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
         <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
         <span class="sr-only">Fire icon</span>
     </div>
@@ -393,7 +393,7 @@ function App() {
 </div>} */}
 
         <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 change md:text-4xl text-white text-center ">
-          <span class="text-yellow-600 dark:text-blue-500">Github </span>{" "}
+          <span class="text-yellow-600 dark:text-yellow-600">Github </span>{" "}
           Heatmap{" "}
           <a target="blank" href={`https://github.com/${github}`}>
             <span class="mdi mdi-link-variant"></span>
@@ -440,7 +440,7 @@ function App() {
 
         <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 change md:text-4xl text-white text-center ">
           Leetcode{" "}
-          <span class="text-yellow-600 dark:text-blue-500">Heatmap </span>
+          <span class="text-yellow-600 dark:text-yellow-600">Heatmap </span>
           <a target="blank" href={`https://leetcode.com/${leetcode}`}>
             <span class="mdi mdi-link-variant"></span>
           </a>

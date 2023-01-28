@@ -34,7 +34,7 @@ const Search = () => {
       <div class="">
         <h1 class="text-center font-bold text-white p-10 mb-40 text-4xl">
           Find Your{" "}
-          <span class="text-yellow-600 dark:text-blue-500">Profile </span>
+          <span class="text-yellow-600 dark:text-yellow-600">Profile </span>
         </h1>
         <div class="w-full mx-auto rounded-xl bg-gray-100 shadow-lg p-10 text-gray-800 relative overflow-hidden resize-x min-w-80 max-w-3xl">
           <div class="relative mt-1">
