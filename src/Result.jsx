@@ -445,9 +445,11 @@ function App() {
             <span class="mdi mdi-link-variant"></span>
           </a>
         </h1>
+        <div class="mb-10">
+
         {newS.length > 3 ? (
           <CalendarHeatmap
-            class="calS"
+            class="calS "
             startDate={startDate}
             endDate={endDate}
             values={newS}
@@ -477,6 +479,8 @@ function App() {
             <LoadingCard class="text-six" count={2} />
           </h1>
         )}
+        </div>
+      
       </div>
     </>
   );

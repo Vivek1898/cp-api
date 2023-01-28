@@ -5,6 +5,13 @@
 .change{
   color:aliceblue !important;
 }
+.loaderSubmit{
+  display: flex;
+  /* margin: auto; */
+  align-content: stretch;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
 /* https://github.com/oguzbits/icon-parallax-background/blob/master/gif/Icon-Parallax.gif 
 https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif
 */
