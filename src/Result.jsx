@@ -208,7 +208,7 @@ function App() {
       });
 
       setGithubApi(tepmValues);
-      console.log(GithubApi);
+      // console.log(GithubApi);
       setLoadGithub(false);
     }
   };
@@ -279,12 +279,12 @@ function App() {
           theme: "light",
         });
       } else {
-        console.log("No Date");
+        console.log("No Submissions");
         toast.dismiss();
         setIsOk(true);
       }
     } catch (error) {
-      console.log("No Date");
+      console.log("No Submissions");
       setIsOk(false);
       setHandleMonth("");
       setHandleSubCount("");
@@ -347,8 +347,8 @@ function App() {
           {ApiDataCf.length > 0 ? (
             <CalendarHeatmap
               onMouseOver={(event, value) => {
-                console.log(event);
-                console.log(value);
+                // console.log(event);
+                // console.log(value);
                 handleShowDate(event, value);
               }}
               onMouseLeave={handleLeaveDate}
@@ -407,8 +407,8 @@ function App() {
             endDate={endDate}
             values={GithubApi}
             onMouseOver={(event, value) => {
-              console.log(event);
-              console.log(value);
+              // console.log(event);
+              // console.log(value);
               handleShowDate(event, value);
             }}
             onMouseLeave={handleLeaveDate}
@@ -452,8 +452,8 @@ function App() {
             endDate={endDate}
             values={newS}
             onMouseOver={(event, value) => {
-              console.log(event);
-              console.log(value);
+              // console.log(event);
+              // console.log(value);
               handleShowDate(event, value);
             }}
             onMouseLeave={handleLeaveDate}

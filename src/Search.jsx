@@ -31,7 +31,7 @@ const Search = () => {
   };
   return (
     <div>
-      <div class="">
+      <div class="min-h-screen ">
         <h1 class="text-center font-bold text-white p-10 mb-40 text-4xl">
           Find Your{" "}
           <span class="text-yellow-600 dark:text-yellow-600">Profile </span>
