@@ -62,15 +62,16 @@ const Form = () => {
   return (
     <div>
       {showResult ? (
-        <div>
-          <h1 class="font-medium  leading-tight  text-4xl mt-2  text-green-500 change text-center ">
+        <div class=" min-h-screen ">
+          <h1 class="text-center font-bold text-white p-10 mb-0 text-4xl change text-center ">
             Register to show your{" "}
             <span class="text-yellow-600 dark:text-yellow-600">Profile </span>
           </h1>
-          <div class=" min-h-screen flex items-center text-lg">
+          <div class="  flex items-center text-lg">
             <form
+            style={{margin:"auto"}}
               onSubmit={handleSubmit}
-              class="p-10  overflow-hidden resize-x min-w-80 max-w-3xl rounded"
+              class="p-1  overflow-hidden resize-x min-w-80 max-w-3xl rounded"
             >
               <div class="shadow">
                 <div class="flex items-center  rounded-t-lg border-gray-500 border-b">
@@ -180,14 +181,14 @@ const Form = () => {
               >
                 Submit
               </button>
-              <div class=" top-0 left-0 w-full h-2 flex">
+              {/* <div class=" top-0 left-0 w-full h-2 flex">
                 <div class="h-2 bg-blue-500 flex-1"></div>
                 <div class="h-2 bg-red-500 flex-1"></div>
                 <div class="h-2 bg-yellow-500 flex-1"></div>
                 <div class="h-2 bg-blue-500 flex-1"></div>
                 <div class="h-2 bg-green-500 flex-1"></div>
                 <div class="h-2 bg-red-500 flex-1"></div>
-              </div>
+              </div> */}
             </form>
           </div>
         </div>
