@@ -242,7 +242,7 @@ startServer();
           </h1>
           <div class="  min-h-screen flex items-center text-lg">
             <Link
-              to={`${moveToResult}`}
+              to={`profile/${moveToResult}`}
               style={{ margin: "auto", padding: "20px" }}
             >
               <button
