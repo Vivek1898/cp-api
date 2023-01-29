@@ -5,7 +5,7 @@ import Form from "./Form";
 import Search from "./Search";
 import Result from "./Result";
 import "./index.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes ,Navigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from "./Header";
@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Header/>
     <ToastContainer />
     <Routes>
-      <Route exact path="/" element={<Form />} />
+      <Route exact path="/" element={<Navigate to ="/profile"/>} />
       <Route path="/profile" exact element={<Form />} />
       <Route path="/profile/:profile" exact element={<Result />} />
       <Route path="/search" exact element={<Search />} />

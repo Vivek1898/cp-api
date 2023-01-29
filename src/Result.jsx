@@ -299,8 +299,8 @@ startServer();
     } catch (error) {
       console.log("No Submissions");
       setIsOk(false);
-      setHandleMonth("");
-      setHandleSubCount("");
+      // setHandleMonth("");
+      // setHandleSubCount("");
       setHandleDay("");
       toast.dismiss();
     }
@@ -308,8 +308,8 @@ startServer();
 
   const handleLeaveDate = () => {
     toast.dismiss();
-    setHandleMonth("");
-    setHandleSubCount("");
+    // setHandleMonth("");
+    // setHandleSubCount("");
     setIsOk(false);
   };
 

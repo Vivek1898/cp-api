@@ -55,6 +55,9 @@ if(!Name){
     }
     //  alert('You have submitted');
   };
+  const Move = () =>{
+    navigate(`${moveToResult}`);
+  }
 
   const startServer = async()=>{
     try {
@@ -242,7 +245,7 @@ startServer();
           </h1>
           <div class="  min-h-screen flex items-center text-lg">
             <Link
-              to={`profile/${moveToResult}`}
+              to={`${moveToResult}`}
               style={{ margin: "auto", padding: "20px" }}
             >
               <button
