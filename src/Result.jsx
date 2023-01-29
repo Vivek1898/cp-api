@@ -357,7 +357,7 @@ startServer();
   endDate={endDate}
   values={ApiDataCf}
 /> */}
-          {ApiDataCf.length > 0 ? (
+          {!loading ? (
             <CalendarHeatmap
               onMouseOver={(event, value) => {
                 // console.log(event);
@@ -413,7 +413,7 @@ startServer();
           </a>
         </h1>
 
-        {GithubApi.length > 0 ? (
+        {!loadGithub ? (
           <CalendarHeatmap
             class="calS"
             startDate={startDate}
