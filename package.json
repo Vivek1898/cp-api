@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@uiw/react-heat-map": "^2.0.5",
     "axios": "^1.2.3",
     "github-contributions-counter": "^2.1.7",
     "moment": "^2.29.4",

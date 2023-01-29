@@ -4,7 +4,7 @@ import reactLogo from "./assets/react.svg";
 import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import HeatMap from "@uiw/react-heat-map";
+
 import CalendarHeatmap from "react-calendar-heatmap";
 import { useLayoutEffect } from "react";
 import { Routes, Route, useParams, BrowserRouter } from "react-router-dom";
