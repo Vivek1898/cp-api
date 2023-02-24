@@ -1,5 +1,5 @@
 # `TLE PROFILES`
-Leetcode ,CodeForces and Github Submisson Heat map Visualizer
+Leetcode ,CodeForces and Ghdhithub Submisson Heat map Visualizer
 ### **Platform Supported**
 `Leetcode`
 `Github`
