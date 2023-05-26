@@ -41,7 +41,7 @@ function App() {
     const user = {
       profile: profile,
     };
-
+console.log("From search")
     // setCodeForces(newProfile);
     // console.log(profile);
     // //   return;
@@ -56,6 +56,7 @@ function App() {
     setUsername(profileName);
     const UserLeetcode = data.data.leetcode;
     setLeetcode(UserLeetcode);
+    console.log(UserLeetcode);
     const UserCodeforces = data.data.codeforces;
     setCodeForces(UserCodeforces);
     const UserGithub = data.data.github;
@@ -66,14 +67,13 @@ function App() {
     // const UserGithub = data.data.github;
     // setLeetcode(data.data.leetcode);
     // console.log(leetcode);
-    const value = await axios.get(
-      `${import.meta.env.VITE_CODEFORCES}${UserCodeforces}`
-    );
+    getDataFromLeetCode(UserLeetcode);
+    geGithubData(UserGithub);
+    
+    const value = await axios.get(`${import.meta.env.VITE_CODEFORCES}${UserCodeforces}`);
     setLoading(true);
-
-    if (value) {
-      // console.log(value.data)
-      // console.log(value.data.result);
+    
+    if (value.status === 200) {
       const tempData = ApiDataCf;
       const myArray = value.data.result;
       myArray.forEach((element, index, array) => {
@@ -84,17 +84,19 @@ function App() {
           .replace("-", "/");
         tempData.push({ date: `${myDate}`, count: `2` });
       });
-
+    
       setApiDataCf(tempData);
       tempData.splice();
       setLoading(false);
       // toast.success("Codeforces Data Loaded Successfully");
       // console.log(ApiDataCf[1]);
       // console.log(ApiDataCf);
+    } else {
+      console.log("Error: API request failed with status", value.status);
     }
-
-    geGithubData(UserGithub);
-    getDataFromLeetCode(UserLeetcode);
+    
+    console.log("Yha Tak Aaya");
+   
     return;
   }
   useEffect(() => {
@@ -102,10 +104,12 @@ function App() {
   }, [loadGithub, leetLoading]);
 
   const getDataFromLeetCode = async (leetcodeProfilrUrl) => {
+    console.log("Hit")
+     console.log(leetcodeProfilrUrl);
     const value = await axios.get(
       `${import.meta.env.VITE_LEETCODE}/${leetcodeProfilrUrl}`
     );
-    // console.log(value.data.status);
+    console.log(value);
 
     if (value) {
       setCount(0);
@@ -460,7 +464,7 @@ startServer();
         </h1>
         <div class="mb-10">
 
-        {newS.length > 3 ? (
+        {newS.length ? (
           <CalendarHeatmap
             class="calS "
             startDate={startDate}
