@@ -41,7 +41,7 @@ function App() {
     const user = {
       profile: profile,
     };
-console.log("From search")
+//console.log("From search")
     // setCodeForces(newProfile);
     // console.log(profile);
     // //   return;
@@ -56,7 +56,7 @@ console.log("From search")
     setUsername(profileName);
     const UserLeetcode = data.data.leetcode;
     setLeetcode(UserLeetcode);
-    console.log(UserLeetcode);
+   // console.log(UserLeetcode);
     const UserCodeforces = data.data.codeforces;
     setCodeForces(UserCodeforces);
     const UserGithub = data.data.github;
@@ -95,7 +95,7 @@ console.log("From search")
       console.log("Error: API request failed with status", value.status);
     }
     
-    console.log("Yha Tak Aaya");
+    //console.log("Yha Tak Aaya");
    
     return;
   }
