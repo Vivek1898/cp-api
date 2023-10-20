@@ -24,19 +24,46 @@ const Form = () => {
       CodeForces: CodeForces.toLowerCase(),
       Github: Github.toLowerCase(),
     };
-if(!Name){
-  toast.error("Name is Required");
-  return
-}else if(!Email){
-  toast.error("Email is Required");
-  return
-}else if(!Profile){
-  toast.error("Profile is Required");
-  return
+    if (!Name) {
+      toast.error("Name is Required");
+      return;
+    } else if (!Email) {
+      toast.error("Email is Required");
+      return;
+    } else if (!Profile) {
+      toast.error("Profile is Required");
+      return;
+    } else if (Profile.includes(' ')) {
+      toast.error("Profile should not contain spaces");
+      return;
+    } else if (Leetcode.includes(' ')) {
+      toast.error("Leetcode Profile should not contain spaces");
+      return;
 
-}
+    }else if (CodeForces.includes(' ')) {
+      toast.error("CodeForces Profile should not contain spaces");
+      return;
+
+    }else if (Github.includes(' ')) {
+      toast.error("Github Profile should not contain spaces");
+      return;
+
+    }else if (/^https:\/\//i.test(Profile) || /^www\./i.test(Profile)) {
+      toast.error("Profile should not start with 'https://' or 'www.'");
+      return;
+    }else if (/^https:\/\//i.test(Leetcode) || /^www\./i.test(Leetcode)) {
+      toast.error("Leetcode Username should not start with 'https://' or 'www.'");
+      return;
+    }else if (/^https:\/\//i.test(CodeForces) || /^www\./i.test(CodeForces)) {
+      toast.error("CodeForces Username should not start with 'https://' or 'www.'");
+      return;
+    }else if (/^https:\/\//i.test(Github) || /^www\./i.test(Github)) {
+      toast.error("Github Username should not start with 'https://' or 'www.'");
+      return;
+    }
+
     // console.log(user);
-    //return
+    // return
     try {
       SetIsSearchIng(true);
       const data = await axios.post(
