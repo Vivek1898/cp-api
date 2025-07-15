@@ -11,7 +11,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from "./Header";
 import Footer from "./Footer";
 import Users from "./Users";
-import AboutUs from "./About.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
     <Header/>
@@ -23,7 +22,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/search" exact element={<Search />} />
       <Route path="/search/:profile" exact element={<Result />} />
       <Route path="/users" exact element={<Users />} />
-        <Route path="/about" exact element={<AboutUs />} />
     </Routes>
     <Footer/>
 
